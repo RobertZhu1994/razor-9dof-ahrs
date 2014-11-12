@@ -81,9 +81,9 @@ void Read_Magn()
   
   if (i == 6)  // All bytes received?
   {
-    magnetom[0] = -1 * ((((int) buff[2]) << 8) | buff[3]);    // X axis (internal sensor -y axis)
-    magnetom[1] = -1 * ((((int) buff[0]) << 8) | buff[1]);    // Y axis (internal sensor -x axis)
-    magnetom[2] = -1 * ((((int) buff[4]) << 8) | buff[5]);    // Z axis (internal sensor -z axis)
+    magnetom[0] = ((((int) buff[2]) << 8) | buff[3]);    // X axis (internal sensor y axis)
+    magnetom[1] = ((((int) buff[0]) << 8) | buff[1]);    // Y axis (internal sensor x axis)
+    magnetom[2] = ((((int) buff[4]) << 8) | buff[5]);    // Z axis (internal sensor z axis)
   }
   else
   {
@@ -111,9 +111,9 @@ void Read_Accel(){
   
   if (i == 6)  // All bytes received?
   {
-    accel[0] = -1 * ((((int) buff[2]) << 8) | buff[3]);    // X axis (internal sensor -y axis)
-    accel[1] = -1 * ((((int) buff[0]) << 8) | buff[1]);    // Y axis (internal sensor -x axis)
-    accel[2] = -1 * ((((int) buff[4]) << 8) | buff[5]);    // Z axis (internal sensor -z axis)
+    accel[0] = ((((int) buff[2]) << 8) | buff[3]);    // X axis (internal sensor y axis)
+    accel[1] = ((((int) buff[0]) << 8) | buff[1]);    // Y axis (internal sensor x axis)
+    accel[2] = ((((int) buff[4]) << 8) | buff[5]);    // Z axis (internal sensor z axis)
   }
   else
   {
