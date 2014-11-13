@@ -1,5 +1,5 @@
 /***************************************************************************************************************
-* Razor AHRS Firmware v1.4.2
+* Razor AHRS Firmware v1.4.2 mod
 * 9 Degree of Measurement Attitude and Heading Reference System
 * for Sparkfun "9DOF Razor IMU" (SEN-10125 and SEN-10736)
 * and "9DOF Sensor Stick" (SEN-10183, 10321 and SEN-10724)
@@ -23,7 +23,7 @@
 *     * v1.3.0
 *       * Cleaned up, streamlined and restructured most of the code to make it more comprehensible.
 *       * Added sensor calibration (improves precision and responsiveness a lot!).
-*       * Added binary yaw/pitch/roll output.
+*       * Added binary yaw/pitch/roll output.#oc
 *       * Added basic serial command interface to set output modes/calibrate sensors/synch stream/etc.
 *       * Added support to synch automatically when using Rovering Networks Bluetooth modules (and compatible).
 *       * Wrote new easier to use test program (using Processing).

@@ -67,7 +67,7 @@ void Read_Magn()
   byte buff[6];
   
   Wire.beginTransmission(ACC_MAG_ADDRESS); 
-  WIRE_SEND(0x08);  // Sends address to read from
+  WIRE_SEND(0x08 | 0x80);  // Sends address to read from
   Wire.endTransmission();
   
   Wire.beginTransmission(ACC_MAG_ADDRESS);
@@ -81,9 +81,9 @@ void Read_Magn()
   
   if (i == 6)  // All bytes received?
   {
-    magnetom[0] = ((((int) buff[2]) << 8) | buff[3]);    // X axis (internal sensor y axis)
-    magnetom[1] = ((((int) buff[0]) << 8) | buff[1]);    // Y axis (internal sensor x axis)
-    magnetom[2] = ((((int) buff[4]) << 8) | buff[5]);    // Z axis (internal sensor z axis)
+    magnetom[0] = ((((int) buff[1]) << 8) | buff[0]);    // X axis
+    magnetom[1] = -1*((((int) buff[3]) << 8) | buff[2]);    // Y axis
+    magnetom[2] = -1*((((int) buff[5]) << 8) | buff[4]);    // Z axis
   }
   else
   {
@@ -97,7 +97,7 @@ void Read_Accel(){
   byte buff[6];
   
   Wire.beginTransmission(ACC_MAG_ADDRESS); 
-  WIRE_SEND(0x28);  // Sends address to read from
+  WIRE_SEND(0x28 | 0x80);  // Sends address to read from
   Wire.endTransmission();
   
   Wire.beginTransmission(ACC_MAG_ADDRESS);
@@ -111,9 +111,9 @@ void Read_Accel(){
   
   if (i == 6)  // All bytes received?
   {
-    accel[0] = ((((int) buff[2]) << 8) | buff[3]);    // X axis (internal sensor y axis)
-    accel[1] = ((((int) buff[0]) << 8) | buff[1]);    // Y axis (internal sensor x axis)
-    accel[2] = ((((int) buff[4]) << 8) | buff[5]);    // Z axis (internal sensor z axis)
+    accel[0] = -1*((((int) buff[1]) << 8) | buff[0]);    // X axis
+    accel[1] = ((((int) buff[3]) << 8) | buff[2]);    // Y axis
+    accel[2] = ((((int) buff[5]) << 8) | buff[4]);    // Z axis
   }
   else
   {
@@ -175,9 +175,9 @@ void Read_Gyro()
   
   if (i == 6)  // All bytes received?
   {
-    gyro[0] = -1 * ((((int) buff[2]) << 8) | buff[3]);    // X axis (internal sensor -y axis)
-    gyro[1] = -1 * ((((int) buff[0]) << 8) | buff[1]);    // Y axis (internal sensor -x axis)
-    gyro[2] = -1 * ((((int) buff[4]) << 8) | buff[5]);    // Z axis (internal sensor -z axis)
+    gyro[0] = ((((int) buff[0]) << 8) | buff[1]);    // X axis
+    gyro[1] =  -1*((((int) buff[2]) << 8) | buff[3]);   // Y axis
+    gyro[2] = -1*((((int) buff[4]) << 8) | buff[5]);   //Z axis
   }
   else
   {
