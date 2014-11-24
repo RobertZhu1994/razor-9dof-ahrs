@@ -489,6 +489,7 @@ char readChar()
 
 void setup()
 {
+  delay(50);
   // Init serial output
   Serial.begin(OUTPUT__BAUD_RATE);
   

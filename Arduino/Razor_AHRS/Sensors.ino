@@ -81,9 +81,9 @@ void Read_Magn()
   
   if (i == 6)  // All bytes received?
   {
-    magnetom[0] = ((((int) buff[1]) << 8) | buff[0]);    // X axis
-    magnetom[1] = -1*((((int) buff[3]) << 8) | buff[2]);    // Y axis
-    magnetom[2] = -1*((((int) buff[5]) << 8) | buff[4]);    // Z axis
+    magnetom[0] = -1 * ((((int) buff[3]) << 8) | buff[2])>>1;    // X axis
+    magnetom[1] = -1 * ((((int) buff[1]) << 8) | buff[0])>>1;    // Y axis
+    magnetom[2] = -1 * ((((int) buff[5]) << 8) | buff[4])>>1;    // Z axis
   }
   else
   {
@@ -111,9 +111,9 @@ void Read_Accel(){
   
   if (i == 6)  // All bytes received?
   {
-    accel[0] = -1*((((int) buff[1]) << 8) | buff[0]);    // X axis
-    accel[1] = ((((int) buff[3]) << 8) | buff[2]);    // Y axis
-    accel[2] = ((((int) buff[5]) << 8) | buff[4]);    // Z axis
+    accel[0] = ((((int) buff[3]) << 8) | buff[2])/5;    // X axis
+    accel[1] = ((((int) buff[1]) << 8) | buff[0])/5;    // Y axis
+    accel[2] = ((((int) buff[5]) << 8) | buff[4])/5;    // Z axis
   }
   else
   {
@@ -175,8 +175,8 @@ void Read_Gyro()
   
   if (i == 6)  // All bytes received?
   {
-    gyro[0] = ((((int) buff[0]) << 8) | buff[1]);    // X axis
-    gyro[1] =  -1*((((int) buff[2]) << 8) | buff[3]);   // Y axis
+    gyro[0] = -1*((((int) buff[2]) << 8) | buff[3]);    // X axis
+    gyro[1] =  -1*((((int) buff[0]) << 8) | buff[1]);   // Y axis
     gyro[2] = -1*((((int) buff[4]) << 8) | buff[5]);   //Z axis
   }
   else
