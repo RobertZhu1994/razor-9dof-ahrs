@@ -1914,6 +1914,7 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <part name="R14" library="fab" deviceset="RES-US" device="1206FAB" value="0"/>
 <part name="JP2" library="SparkFun" deviceset="ARDUINO_SERIAL_PROGRAM" device="SMD" value="FTDI Basic"/>
 <part name="U$2" library="fab" deviceset="SOLDER_JUMPER" device=""/>
+<part name="JP3" library="SparkFun" deviceset="ARDUINO_SERIAL_PROGRAM" device="SMD" value="FTDI Basic"/>
 </parts>
 <sheets>
 <sheet>
@@ -1952,18 +1953,19 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <instance part="P+3" gate="G$1" x="363.22" y="119.38"/>
 <instance part="GND6" gate="1" x="396.24" y="48.26"/>
 <instance part="P+6" gate="G$1" x="388.62" y="76.2"/>
-<instance part="R1" gate="G$1" x="210.82" y="114.3"/>
-<instance part="R2" gate="G$1" x="210.82" y="106.68"/>
-<instance part="R5" gate="G$1" x="210.82" y="99.06"/>
+<instance part="R1" gate="G$1" x="195.58" y="114.3"/>
+<instance part="R2" gate="G$1" x="195.58" y="106.68"/>
+<instance part="R5" gate="G$1" x="195.58" y="99.06"/>
 <instance part="FRAME2" gate="G$1" x="167.64" y="-40.64"/>
 <instance part="FRAME2" gate="G$2" x="314.96" y="-40.64"/>
-<instance part="R7" gate="G$1" x="226.06" y="114.3"/>
-<instance part="R10" gate="G$1" x="226.06" y="106.68"/>
-<instance part="R11" gate="G$1" x="226.06" y="99.06"/>
-<instance part="R12" gate="G$1" x="241.3" y="114.3"/>
-<instance part="R13" gate="G$1" x="241.3" y="106.68"/>
-<instance part="R14" gate="G$1" x="241.3" y="99.06"/>
-<instance part="JP2" gate="G$1" x="274.32" y="104.14"/>
+<instance part="R7" gate="G$1" x="210.82" y="114.3"/>
+<instance part="R10" gate="G$1" x="210.82" y="106.68"/>
+<instance part="R11" gate="G$1" x="210.82" y="99.06"/>
+<instance part="R12" gate="G$1" x="226.06" y="114.3"/>
+<instance part="R13" gate="G$1" x="226.06" y="106.68"/>
+<instance part="R14" gate="G$1" x="226.06" y="99.06"/>
+<instance part="JP2" gate="G$1" x="259.08" y="104.14"/>
+<instance part="JP3" gate="G$1" x="281.94" y="104.14"/>
 </instances>
 <busses>
 </busses>

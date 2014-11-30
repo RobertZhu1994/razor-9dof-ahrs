@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.0125" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.000000123031" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.000000123031" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -685,6 +685,7 @@ The minimum width is set at 10 mils for now. You can go down to 6, but only if y
 <element name="R14" library="fab" package="R1206FAB" value="0" x="14.75" y="44.5" rot="R90"/>
 <element name="JP2" library="SparkFun" package="1X06-SMD" value="FTDI Basic" x="72.314103125" y="33.453025" rot="R90"/>
 <element name="U$2" library="fab" package="SJFAB" value="SOLDER_JUMPER" x="15.5575" y="6.985" rot="R180"/>
+<element name="JP3" library="SparkFun" package="1X06-SMD" value="FTDI Basic" x="60.798259375" y="8.0344875" rot="R180"/>
 </elements>
 <signals>
 <signal name="3.3V">
